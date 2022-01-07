@@ -30,12 +30,7 @@ import useNavigation from '../../hooks/navigation'
 import useStore from '../../hooks/store'
 import { setMessage } from '../../store'
 import Icon from '../Icon/index.vue'
-// import services from '../../services'
-const services = {
-  feedback: {
-    create: null
-  }
-}
+import services from '../../services'
 
 type State = {
   feedback: string;
@@ -77,7 +72,7 @@ export default defineComponent({
       setMessage(state.feedback)
       state.isLoading = true
       try {
-        const response = await services.feedback.create({
+        const response = await services.feedbacks.create({
           type: store.feedbackType,
           text: store.message,
           page: store.currentPage,

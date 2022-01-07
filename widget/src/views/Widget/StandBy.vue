@@ -1,5 +1,6 @@
 <template>
   <div
+    id="widget-open-button"
     @click="() => emit('open-box')"
     class="
       fixed z-50 bottom-0 right-0 mb-5 mr-5 bg-brand-main rounded-full
