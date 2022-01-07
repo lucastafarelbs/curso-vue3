@@ -1,4 +1,4 @@
-import { reactive, readonly } from "vue"
+import { reactive, readonly } from 'vue'
 
 export type StoreState = {
   currentComponent: string;
@@ -31,11 +31,11 @@ export function setFeedbackType (feedbackType: string): void {
   state.feedbackType = feedbackType
 }
 
-export function setFingerprint(fingerprint: string): void {
+export function setFingerprint (fingerprint: string): void {
   state.fingerprint = fingerprint
 }
 
-export function setApiKey(apiKey: string): void {
+export function setApiKey (apiKey: string): void {
   state.apiKey = apiKey
 }
 
