@@ -6,6 +6,8 @@ function init (apiKey) {
 
     const WIDGET_URL = `https://lucastafarelbs-feedbacker-widget.netlify.app?api_key=${apiKey}&page=${page}&fingerprint=${fingerprint.visitorId}`
     const config = { method: 'HEAD' }
+    console.log(WIDGET_URL)
+    console.log(`https://backend-curso-vue3.vercel.app/apikey/exists?apiKey=${apiKey}`)
     const res = await fetch(`https://backend-curso-vue3.vercel.app/apikey/exists?apiKey=${apiKey}`, config)
 
     if (res.status === 200) {
